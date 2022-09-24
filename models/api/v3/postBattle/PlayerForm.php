@@ -4,7 +4,6 @@
  * @copyright Copyright (C) 2015-2022 AIZAWA Hina
  * @license https://github.com/fetus-hina/stat.ink/blob/master/LICENSE MIT
  * @author AIZAWA Hina <hina@fetus.jp>
- * @author eli <frozenpandaman@users.noreply.github.com>
  */
 
 namespace app\models\api\v3\postBattle;
@@ -56,7 +55,7 @@ final class PlayerForm extends Model
             [['me', 'disconnected'], 'in', 'range' => ['yes', 'no', true, false]],
             [['rank_in_team'], 'integer', 'min' => 1, 'max' => 4],
             [['name'], 'string', 'min' => 1, 'max' => 10],
-            [['number'], 'integer', 'min' => 0, 'max' => 99999],
+            [['number'], 'integer', 'min' => 0, 'max' => 9999],
             [['splashtag_title'], 'string', 'max' => 255],
             [['weapon'], 'string'],
             [['weapon'], KeyValidator::class,
